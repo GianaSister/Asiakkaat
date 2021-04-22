@@ -67,7 +67,7 @@ public class Dao {
 			con=yhdista();
 			if(con!=null){
 				stmtPrep = con.prepareStatement(sql);
-				//stmtPrep.setInt(1, "%" + hakusana + "%");
+				stmtPrep.setString(1, "%" + hakusana + "%");
 				stmtPrep.setString(2, "%" + hakusana + "%");   
 				stmtPrep.setString(3, "%" + hakusana + "%");
 				stmtPrep.setString(4, "%" + hakusana + "%");   
