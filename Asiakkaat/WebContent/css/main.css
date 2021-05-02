@@ -11,3 +11,12 @@ th {
 body {
   padding: 1rem;
 }
+.poista {
+	color: red;
+	text-decoration: underline;
+	cursor: pointer;	
+}
+#uusiAuto, #takaisin{
+	color: white;	
+	cursor: pointer;	
+}
