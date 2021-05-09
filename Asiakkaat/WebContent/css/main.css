@@ -1,10 +1,12 @@
-td, th {
+table td, th {
   width: 4rem;
   height: 2rem;
   border: 1px solid #ccc;
   text-align: center;
+  cursor: pointer;
+  color: white;
 }
-th {
+table th {
   background: lightblue;
   border-color: white;
 }
@@ -16,7 +18,7 @@ body {
 	text-decoration: underline;
 	cursor: pointer;	
 }
-#uusiAuto, #takaisin{
+#uusiAsiakas, #takaisin{
 	color: white;	
 	cursor: pointer;	
 }
