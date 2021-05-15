@@ -35,8 +35,7 @@ public class Asiakkaat extends HttpServlet {
 			asiakkaat = dao.listaaKaikki();
 			strJSON = new JSONObject().put("asiakkaat", asiakkaat).toString();
 		}else if(pathInfo.indexOf("haeyksi")!=-1) {		//polussa on sana "haeyksi", eli haetaan yhden asiakkaan tiedot
-			String muutettavaAsiakas_id = pathInfo.replace("/haeyksi/", ""); //poistetaan polusta "/haeyksi/", j‰ljelle j‰‰ asiakas_id		
-			int asiakas_id = Integer.parseInt(muutettavaAsiakas_id);
+			int asiakas_id = Integer.parseInt(pathInfo.replace("/haeyksi/", ""));  //poistetaan polusta "/haeyksi/", j‰ljelle j‰‰ asiakas_id
 			Asiakas asiakas = dao.etsiAsiakas(asiakas_id);
 			if(asiakas==null) {
 				strJSON = "{}";

@@ -113,7 +113,7 @@ function lisaaTiedot(){
     	$("#ilmo").html("Asiakkaan lisääminen onnistui.");
     	$("#asiakas_id", "#etunimi", "#sukunimi", "#puhelin", "sposti").val("");
 		}
-}});	
+	}});	
 }
 </script>
 </html>
