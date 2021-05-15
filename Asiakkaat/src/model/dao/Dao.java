@@ -122,13 +122,13 @@ public class Dao {
 				stmtPrep.setInt(1, asiakas_id);
         		rs = stmtPrep.executeQuery();  
         		if(rs.isBeforeFirst()){ //jos kysely tuotti dataa, eli asiakas_id on käytössä
-        			//rs.next();
+        			rs.next();
         			asiakas = new Asiakas();        			
-        			asiakas.setAsiakas_id(rs.getInt("asiakas_id"));
-					asiakas.setEtunimi(rs.getString("etunimi"));
-					asiakas.setSukunimi(rs.getString("sukunimi"));	
-					asiakas.setPuhelin(rs.getString("puhelin"));
-					asiakas.setSposti(rs.getString("sposti"));
+        			asiakas.setAsiakas_id(rs.getInt(1));
+					asiakas.setEtunimi(rs.getString(2));
+					asiakas.setSukunimi(rs.getString(3));	
+					asiakas.setPuhelin(rs.getString(4));
+					asiakas.setSposti(rs.getString(5));
 				}        		
 			}	
 			con.close();  
